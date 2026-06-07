@@ -1,4 +1,93 @@
 ---
 import '../styles/global.css';
+const base = import.meta.env.BASE_URL;
 ---
-<main class="page"><h1>Prepare your repo for AI coding agents.</h1><p>A practical guide for metadata files, rules, skills, workflows, subagents, templates, and guardrails.</p><p><a href="https://github.com/RafflesiaKhan/prepare-repo-for-ai-agent">View GitHub repo</a></p></main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Agent Repo Guide — Prepare your repository for AI coding agents</title>
+  <meta name="description" content="A practical knowledge base for structuring projects with skills, rules, hooks, subagents, and plugins that AI agents can follow." />
+</head>
+<body>
+  <header class="topnav">
+    <a href={base} class="brand">AI Agent Repo Guide</a>
+    <nav class="nav-links">
+      <a href={`${base}terminology`}>Terminology</a>
+      <a href={`${base}claude-reference`}>Claude Code</a>
+      <a href={`${base}codex-reference`}>Codex</a>
+      <a href={`${base}ibmbob-reference`}>IBM Bob</a>
+      <a href="https://github.com/RafflesiaKhan/prepare-repo-for-ai-agent" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Prepare your repo for AI coding agents.</h1>
+    <p>
+      A practical knowledge base covering the building blocks every AI agent needs:
+      metadata files, rules, skills, hooks, subagents, plugins, and MCP servers.
+      Platform-neutral. Claude Code, Codex, IBM Bob, and beyond.
+    </p>
+
+    <div class="mental-model">
+      <div><span>Metadata file  →</span> What the agent should KNOW</div>
+      <div><span>Rules          →</span> How the agent should BEHAVE</div>
+      <div><span>Skill          →</span> How to do REPEATED TASKS</div>
+      <div><span>Workflow       →</span> The PROCESS from start to finish</div>
+      <div><span>Subagent       →</span> WHO handles specialized work</div>
+      <div><span>Hook           →</span> What MUST happen automatically</div>
+      <div><span>Guardrail      →</span> What the agent CANNOT do</div>
+      <div><span>Plugin         →</span> How to SHARE capabilities across repos</div>
+    </div>
+  </div>
+
+  <p class="section-label">Reference Documents</p>
+  <div class="cards">
+    <div class="card">
+      <p class="card-tag">Platform-neutral</p>
+      <h3>Terminology Map</h3>
+      <p>
+        The complete 27-section taxonomy of all agent building blocks. Metadata files,
+        skills, hooks, subagents, plugins, MCP, decision trees, and common mistakes.
+        Start here.
+      </p>
+      <a href={`${base}terminology`}>Read Terminology →</a>
+    </div>
+
+    <div class="card">
+      <p class="card-tag">Claude Code</p>
+      <h3>Claude Code Reference</h3>
+      <p>
+        Complete setup guide with CLAUDE.md templates, settings.json, all 30 hook events,
+        skill/subagent/plugin examples, MCP integration, and security patterns.
+      </p>
+      <a href={`${base}claude-reference`}>Read Claude Code Reference →</a>
+    </div>
+
+    <div class="card">
+      <p class="card-tag">OpenAI Codex</p>
+      <h3>Codex Reference</h3>
+      <p>
+        Setup patterns for Codex and OpenAI-compatible agents. AGENTS.md structure,
+        skills, subagents, configuration, and Codex-specific decision trees.
+      </p>
+      <a href={`${base}codex-reference`}>Read Codex Reference →</a>
+    </div>
+
+    <div class="card">
+      <p class="card-tag">IBM Bob</p>
+      <h3>IBM Bob Reference</h3>
+      <p>
+        Mental models and configuration for IBM Bob. Custom modes, rules, skills,
+        .bob/ directory structure, and IBM Bob–specific patterns.
+      </p>
+      <a href={`${base}ibmbob-reference`}>Read IBM Bob Reference →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>A public knowledge base for AI agent–ready repositories. <a href="https://github.com/RafflesiaKhan/prepare-repo-for-ai-agent">Contribute on GitHub</a>.</p>
+  </footer>
+</body>
+</html>
