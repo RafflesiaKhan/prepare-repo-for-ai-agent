@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy
 on:
   push:
     branches: [main]
@@ -16,6 +16,5 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment
+    steps:
+      - uses: actions/de
