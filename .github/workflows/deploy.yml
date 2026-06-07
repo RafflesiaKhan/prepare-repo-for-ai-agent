@@ -1,20 +1,14 @@
-name: Deploy
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+name: D
+on: workflow_dispatch
+permissions: {contents: read, pages: write, id-token: write}
 jobs:
-  build:
+  b:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: withastro/action@v6
-  deploy:
-    needs: build
+  d:
+    needs: b
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/de
+      - uses: actions/deploy-pages@v4
